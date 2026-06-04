@@ -1,0 +1,32 @@
+{
+  "stores_processed": [
+    "ST1008",
+    "ST1076"
+  ],
+  "footfall": 30,
+  "total_sessions": 45,
+  "customer_sessions": 30,
+  "conversion_rate": 0.1,
+  "converted_sessions": 3,
+  "avg_dwell_by_zone": {
+    "MAKEUP": 0.47,
+    "UNKNOWN": 0.25,
+    "BROWSING": 5.0,
+    "BILLING": 0.0,
+    "ENTRY": 0.0
+  },
+  "queue_depth": {
+    "max": 2,
+    "mean": 1.03,
+    "p95": 1
+  },
+  "queue_abandonment_rate": 1.0,
+  "cross_sell_rate": 0.0,
+  "staff_exclusion_rate": 0.3333,
+  "total_pos_txns": 101,
+  "total_gmv_inr": 34331.71,
+  "clips_processed": 8,
+  "total_detections": 17036,
+  "total_events": 1059,
+  "group_entries": 1
+}

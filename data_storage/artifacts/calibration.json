@@ -1,0 +1,36 @@
+{
+  "thresholds": {
+    "yolo_conf": 0.35,
+    "bytetrack_track_thresh": 0.15,
+    "clip_staff_threshold": 0.28,
+    "clip_spatial_staff_ratio": 0.5,
+    "group_entry_window_s": 3.0,
+    "zone_dwell_emit_seconds": 10,
+    "reentry_window_seconds": 300,
+    "pos_conversion_window_sec": 300,
+    "reid_similarity_threshold": 0.82
+  },
+  "v2_upgrades": {
+    "STORE_CONFIGS": "Replaces hardcoded layout JSON",
+    "enterprise_logging": "logging module; no bare print() in logic",
+    "hybrid_staff_exclusion": "excluded_cam | CLIP score | spatial dwell ratio",
+    "group_entry_handling": "Within 3.0s => shared group_id",
+    "store_scoped_reid": "ReID per store \u2014 no cross-store merging",
+    "dwell_ms": "Zone dwell in milliseconds in every event",
+    "new_pos_schema": "7-col evaluator schema; safe empty fallback"
+  },
+  "sanity_checks": {
+    "passed": [
+      "events.jsonl non-empty OR no clips",
+      "Schema contract satisfied",
+      "store_id in all events",
+      "dwell_ms in all events",
+      "group_id in model_meta",
+      "sessions.parquet has required cols",
+      "Conversion rate in [0,1]",
+      "Staff sessions excluded from footfall",
+      "Group IDs assigned"
+    ],
+    "failed": []
+  }
+}

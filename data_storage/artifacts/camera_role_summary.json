@@ -1,0 +1,38 @@
+{
+  "ST1008": {
+    "CAM 1": {
+      "role": "ZONE_A",
+      "excluded": false
+    },
+    "CAM 2": {
+      "role": "ZONE_B",
+      "excluded": false
+    },
+    "CAM 3": {
+      "role": "ENTRY_EXIT",
+      "excluded": false
+    },
+    "CAM 5": {
+      "role": "BILLING_COUNTER",
+      "excluded": false
+    }
+  },
+  "ST1076": {
+    "CAM_BILLING": {
+      "role": "BILLING_COUNTER",
+      "excluded": false
+    },
+    "CAM_ENTRY_1": {
+      "role": "ENTRY_EXIT",
+      "excluded": false
+    },
+    "CAM_ENTRY_2": {
+      "role": "ENTRY_EXIT",
+      "excluded": false
+    },
+    "CAM_ZONE": {
+      "role": "MAIN_FLOOR",
+      "excluded": false
+    }
+  }
+}

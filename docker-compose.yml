@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./backend
+    container_name: purplle_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data_storage:/app/data_storage
+    environment:
+      - DATABASE_URL=sqlite:////app/data_storage/purplle.db
+      - DATA_DIR=/app/data_storage
+    healthcheck:
+      # Use native Python to ping the health endpoint instead of curl
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build: ./frontend
+    container_name: purplle_dashboard
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy

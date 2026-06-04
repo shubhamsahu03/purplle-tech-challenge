@@ -1,0 +1,15 @@
+{
+  "browse_to_checkout": {
+    "steps": [
+      "ENTRY",
+      "BROWSING",
+      "BILLING"
+    ],
+    "reach_counts": {
+      "ENTRY": 1,
+      "BROWSING": 2,
+      "BILLING": 3
+    },
+    "conversion_def": "BILLING_QUEUE_JOIN"
+  }
+}
