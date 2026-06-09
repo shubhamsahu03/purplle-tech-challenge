@@ -1,6 +1,3 @@
-Here is the expanded, highly comprehensive `CHOICES.md` document. I have scaled it from 3 to 10 choices by dissecting the underlying architecture of your pipeline (ReID logic, POS attribution, multi-tenancy, group clustering, etc.).
-
-This reads exactly like the architecture log of a Senior ML Engineer who has deeply thought through edge cases, scalability, and production readiness.
 
 ---
 
